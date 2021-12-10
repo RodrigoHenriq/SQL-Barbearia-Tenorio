@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Dez-2021 às 23:51
+-- Tempo de geração: 10-Dez-2021 às 15:41
 -- Versão do servidor: 10.4.18-MariaDB
 -- versão do PHP: 8.0.3
 
@@ -87,7 +87,7 @@ CREATE TABLE `cliente` (
 INSERT INTO `cliente` (`idCliente`, `nome`, `dataNasc`, `cpf`, `email`, `endereco`, `telefone`, `idTurma`) VALUES
 (20, 'Adriano de Paula', '1989-06-01', '711.174.578-77', 'adrian.de.paula@gmail.com', 'Taguatinga Norte', '(61) 92453-4789', 8),
 (22, 'Barbaba Marques', '1996-04-04', '018.417.711-12', 'barbara.marques@gmail.com', 'Guará I', '(61) 98597-7544', 9),
-(23, 'Igor Souza', '2002-08-27', '432.918.918-64', 'igor.souza@gmail.com', 'Núcleo Bandeirante', '(61) 99357-3579', 8);
+(25, 'Pedro de Sousa', '2021-05-11', '174.810.386-51', 'pedro.sousa@gmail.com', 'Ceilândia', '(61) 98897-4523', 8);
 
 -- --------------------------------------------------------
 
@@ -382,7 +382,8 @@ INSERT INTO `venda` (`idVenda`, `dataVenda`, `precoTotal`, `idCliente`, `idUsuar
 (12, '2022-01-25', 1400, 20, 8),
 (13, '2022-01-27', 1400, 20, 6),
 (14, '2022-01-29', 2800, 22, 6),
-(15, '2022-01-31', 4200, 20, 6);
+(15, '2022-01-31', 4200, 20, 6),
+(16, '2021-12-08', 2800, 25, 3);
 
 -- --------------------------------------------------------
 
@@ -404,7 +405,8 @@ CREATE TABLE `venda_curso` (
 INSERT INTO `venda_curso` (`idVenda`, `idCurso`, `qtd`, `precoVendido`) VALUES
 (1, 1, 2, 250),
 (2, 1, 2, 250),
-(3, 1, 4, 250);
+(3, 1, 4, 250),
+(16, 1, 2, 1400);
 
 --
 -- Índices para tabelas despejadas
@@ -508,7 +510,7 @@ ALTER TABLE `barbeiro`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idCliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de tabela `curso`
@@ -544,7 +546,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `venda`
 --
 ALTER TABLE `venda`
-  MODIFY `idVenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idVenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restrições para despejos de tabelas
